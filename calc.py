@@ -1,7 +1,7 @@
 #Criar uma calculadora que números ou operadores matemáticos e realize a operação matemática desejada, com a possibilidade de ver resultado no final.
 
 def main():
-    '''Calculadora que realiza operações matemáticas'''
+    '''Método que inicia a calculadora, recebe os valores por input do usuário e retorna o resultado da operação matemática desejada.'''
     ligada = True
     valor = 0
     print('Bem vindo a calculadora')
@@ -11,13 +11,25 @@ def main():
         if entrada == 'sair':
             ligada = False
         elif entrada == '+':
-            valor += int(input())
+            try:
+                valor += int(input())
+            except: 
+                print('Err')
         elif entrada == '-':
-            valor -= int(input())
+            try:
+                valor -= int(input())
+            except:
+                print('Err')
         elif entrada == '*':
-            valor *= int(input())
+            try:
+                valor *= int(input())
+            except:
+                print('Err')
         elif entrada == '/':
-            valor /= int(input())
+            try:
+                valor /= int(input())
+            except:
+                print('Err')
         elif entrada == 'c' or entrada == 'C':
             valor = 0
         else:
@@ -25,7 +37,8 @@ def main():
                 valor = int(entrada)
             except: 
                 print('Err')
-        print(f"Total {valor}")
+        if ligada:
+            print(f"Total {valor}")
         
 
 if __name__ == '__main__':
