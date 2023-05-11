@@ -1,5 +1,3 @@
-#Criar uma calculadora que números ou operadores matemáticos e realize a operação matemática desejada, com a possibilidade de ver resultado no final.
-
 def main():
     '''Método que inicia a calculadora, recebe os valores por input do usuário e retorna o resultado da operação matemática desejada.'''
     ligada = True
